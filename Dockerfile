@@ -1,6 +1,6 @@
 FROM maven:3.6.1-jdk-7-alpine as build
 WORKDIR /opt/demo
-COPY . /opt/demo
+COPY . .
 RUN mvn package -D skipTests
 
 FROM tomcat as run
